@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace MatchingPairs
 {
     public partial class Form1 : Form
@@ -22,7 +24,7 @@ namespace MatchingPairs
             {
                 Label? iconLabel = control as Label;
 
-                if (iconLabel != null ) 
+                if (iconLabel != null)
                 {
                     int randomNumber = random.Next(icons.Count);
                     iconLabel.Text = icons[randomNumber];
@@ -41,9 +43,22 @@ namespace MatchingPairs
 
                 if (iconLabel != null)
                 {
-                    iconLabel.Visible = false;
+                    iconLabel.ForeColor = iconLabel.BackColor;
                 }
             }
-        } 
+        }
+
+        private void label_click(object sender, EventArgs e)
+        {
+            Label? iconLabel = sender as Label;
+
+            if (iconLabel != null)
+            {
+                if (iconLabel.ForeColor != Color.Black)
+                {
+                    iconLabel.ForeColor = Color.Black;
+                }
+            }
+        }
     }
 }
