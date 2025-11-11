@@ -20,7 +20,7 @@ namespace MatchingPairs
         {
             foreach (Control control in tableLayoutPanel1.Controls)
             {
-                Label iconLabel = control as Label;
+                Label? iconLabel = control as Label;
 
                 if (iconLabel != null ) 
                 {
@@ -37,9 +37,12 @@ namespace MatchingPairs
         {
             foreach (Control control in tableLayoutPanel1.Controls)
             {
-                Label iconLabel = control as Label;
+                Label? iconLabel = control as Label;
 
-                iconLabel.Visible = false;
+                if (iconLabel != null)
+                {
+                    iconLabel.Visible = false;
+                }
             }
         } 
     }
