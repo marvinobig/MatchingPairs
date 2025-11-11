@@ -13,6 +13,7 @@ namespace MatchingPairs
         {
             InitializeComponent();
             AssignIconsToSquare();
+            HideIcons();
         }
 
         private void AssignIconsToSquare()
@@ -26,9 +27,20 @@ namespace MatchingPairs
                     int randomNumber = random.Next(icons.Count);
                     iconLabel.Text = icons[randomNumber];
 
+                    //iconLabel.ForeColor = iconLabel.BackColor;
                     icons.RemoveAt(randomNumber);
                 }
             }
         }
+
+        private void HideIcons()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                iconLabel.Visible = false;
+            }
+        } 
     }
 }
