@@ -12,6 +12,7 @@ namespace MatchingPairs
         public Form1()
         {
             InitializeComponent();
+            AssignIconsToSquare();
         }
 
         private void AssignIconsToSquare()
