@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tableLayoutPanel1 = new TableLayoutPanel();
             label16 = new Label();
             label15 = new Label();
@@ -45,6 +46,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -307,6 +309,11 @@
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label_click;
             // 
+            // timer1
+            // 
+            timer1.Interval = 750;
+            timer1.Tick += timer1_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -338,5 +345,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
