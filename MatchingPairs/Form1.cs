@@ -54,6 +54,8 @@ namespace MatchingPairs
                     secondClicked = iconLabel;
                     iconLabel.ForeColor = Color.Black;
 
+                    CheckForWin();
+                    
                     if (firstClicked.Text == secondClicked.Text)
                     {
                         firstClicked = null;
@@ -74,6 +76,25 @@ namespace MatchingPairs
             secondClicked.ForeColor = secondClicked.BackColor;
             firstClicked = null;
             secondClicked = null;   
+        }
+
+        private void CheckForWin()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label? iconLabel = control as Label;
+
+                if (iconLabel != null) 
+                { 
+                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            MessageBox.Show("Sehr Gut. Du bist ziemlich Glück. Du hast gewonnen.");
+            Close();
         }
     }
 }
