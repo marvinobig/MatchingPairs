@@ -25,7 +25,7 @@ The player flips two cards (icons) at a time and tries to find all matching pair
 - **Framework:** .NET (Windows Forms)  
 - **IDE:** Visual Studio
 
-## Example Screenshot
+## App Screenshot
 
 ![Gameplay](.github/images/matching-pairs.png)
 
