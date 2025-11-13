@@ -27,5 +27,5 @@ The player flips two cards (icons) at a time and tries to find all matching pair
 
 ## Example Screenshot
 
-![Gameplay](.github\images\matching-pairs.png)
+![Gameplay](.github/images/matching-pairs.png)
 
